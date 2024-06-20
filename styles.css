@@ -1,0 +1,236 @@
+/* 'Raleway' */
+:root{
+    font-size: 16px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins",sans-serif;
+}
+/*header start*/
+header{
+    background-color: #be3144;
+    height: 75px;
+    padding: 0 35px;
+    font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-family:sans-serif;
+    z-index: 1;
+    border-bottom: 1px solid black;
+}
+header nav{
+    height: 100%;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+header ul li a:hover{
+    background-color: #45567d;
+}
+@media (max-width:400px) {
+    header{
+        padding: 0;
+    }
+    nav{
+        width: 90%;
+        margin: auto;
+    }
+    header ul li a{
+        width: fit-content;
+        margin-left: 10px;
+        padding: 0 5px;
+    }
+}
+/*header end*/
+/*welcome start*/
+#welcome-section{
+    margin-top: 75px;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding: 0 10px;
+}
+#welcome-section h1,.contact h1{
+    margin: 0;
+    color: white;
+    font-size: 3rem;
+    font-family: "Raleway",sans-serif;
+}
+#welcome-section p,.contact p{
+    font-family: "Poppins",sans-serif;
+    color: #be3144;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight:  200;
+}
+/*welcome end*/
+/*projects start*/
+#projects{
+    background-color: #45567d;
+    padding-top: 115px;
+    padding-bottom: 100px;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+#projects h2{
+    text-align: center;
+    color: white;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translate(calc(-50% - 10px));
+    font-family: "Raleway",sans-serif;
+    padding: 7px 20px;
+    border-bottom: 2px solid white;
+    margin: 0 10px 60px;
+    font-size: 2.7rem;
+}
+/*300 460*/
+#projects .figure-container{
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 40px;
+}
+#projects .figure-container figure{
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#projects .figure-container figure img{
+    aspect-ratio: 3 / 3;
+    object-fit: cover;
+    width: 100%;
+    height: calc(100% - 65px);
+}
+#projects .project-tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    font-family: "Poppins",sans-serif;
+    background-color: #303841;
+    margin-top: -5px;
+    font-size: 1.1rem;
+}
+span{
+    font-family: "Poppins",sans-serif;
+    opacity: 0;
+    color: #fb7b54;
+    transition: opacity 0.3s;
+    font-size: 1.3rem;
+    margin: 0 5px;
+}
+a:hover span{
+    opacity: 1;
+}
+@media (max-width:380px) {
+    #projects .figure-container{
+        grid-template-columns: 1fr;
+    }
+}
+.button{
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 60px auto 0;
+    background-color: #303841;
+    font-size: 1.4rem;
+    transition: background-color 0.3s;
+}
+.button:hover{
+    background-color: #be3144;
+}
+.button i{
+    position: relative;
+    left: 0;
+    transition: left 0.3s;
+}
+.button:hover i{
+    left: 3px;
+}
+/*projects end*/
+/*contact start*/
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #303841;
+    height: calc(100vh - 120px);
+    text-align: center;
+    padding: 0 10px;
+}
+.contact p {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.links{
+    display: flex;
+    gap: 40px;
+    font-style: normal;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.links div:hover{
+    top: 10px;
+}
+.links div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    top: 0;
+    transition: top 0.3s;
+}
+.links div p,.links div i{
+    font-size: 1.5rem;
+    font-style: normal;
+}
+.links div i{
+    height: 15px;
+}
+/*contact end*/
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #303841;
+    border-top: 5px solid #be3144;
+    text-align: center;
+}
